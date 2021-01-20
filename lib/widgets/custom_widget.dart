@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+//custom widget
 class Col extends StatelessWidget {
   static final String id='custom_wid';
   final Color color;

@@ -10,6 +10,7 @@ import 'package:planlar/pages/daily_page.dart';
 import 'package:planlar/services/prefs_service.dart';
 import 'package:planlar/services/rtdb_service.dart';
 import 'package:planlar/services/storage_service.dart';
+import 'package:planlar/widgets/indicator_pro.dart';
 class DetailPage extends StatefulWidget {
   static const String id="detail_page";
   @override
@@ -88,49 +89,56 @@ class _DetailPageState extends State<DetailPage> {
           SizedBox(width: 15,),
         ],
       ),
-      body:Container(
-        width: size.width,
-        padding: EdgeInsets.symmetric(horizontal: 20),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              InkWell(
-                child: Container(
-                  height: size.width*0.7,
-                  width: size.width*0.7,
-                  padding: EdgeInsets.all(20),
-                  margin:EdgeInsets.only(bottom: 20,top: 20),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: Colors.white,
+      body:Stack(
+        children: [
+          Container(
+            width: size.width,
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  InkWell(
+                    child: Container(
+                      height: size.width*0.7,
+                      width: size.width*0.7,
+                      padding: EdgeInsets.all(20),
+                      margin:EdgeInsets.only(bottom: 20,top: 20),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.white,
+                      ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(20),
+                        child:_image!=null?Image.file(_image,fit: BoxFit.cover,):Image.asset('assets/images/barg1.png',fit: BoxFit.cover,),
+                      ),
+                    ),
+                    onTap: getImage,
                   ),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(20),
-                    child:_image!=null?Image.file(_image,fit: BoxFit.cover,):Image.asset('assets/images/barg1.png',fit: BoxFit.cover,),
+                  _field(context,'Title',titleController),
+                  _field(context,'Content',contentController),
+                  Container(
+                    margin: EdgeInsets.only(bottom: 20),
+                    width: double.infinity,
+                    height: size.width*0.15,
+                    child:FlatButton(
+                      onPressed: (){
+                        _addPost();
+                      },
+                      child:Text('Add',style: GoogleFonts.poppins(fontWeight: FontWeight.w600,fontSize: 20,color: Colors.white),),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      color:Theme.of(context).textTheme.button.color,
+                    ),
                   ),
-                ),
-                onTap: getImage,
+                ],
               ),
-              _field(context,'Title',titleController),
-              _field(context,'Content',contentController),
-              Container(
-                margin: EdgeInsets.only(bottom: 20),
-                width: double.infinity,
-                height: size.width*0.15,
-                child:FlatButton(
-                  onPressed: (){
-                    _addPost();
-                  },
-                  child:Text('Add',style: GoogleFonts.poppins(fontWeight: FontWeight.w600,fontSize: 20,color: Colors.white),),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  color:Theme.of(context).textTheme.button.color,
-                ),
-              ),
-            ],
+            ),
           ),
-        ),
+          if(isLoading)Center(
+            child:ProIndicator()
+          ),
+        ],
       ),
     );
   }

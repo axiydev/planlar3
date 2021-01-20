@@ -7,6 +7,7 @@ import 'package:planlar/pages/home_page.dart';
 import 'package:planlar/pages/detail_page.dart';
 import 'package:planlar/services/prefs_service.dart';
 import 'package:planlar/services/rtdb_service.dart';
+import 'package:planlar/widgets/indicator_pro.dart';
 
 class DailyPage extends StatefulWidget {
   static const String id="daily_page";
@@ -79,35 +80,42 @@ class _DailyPageState extends State<DailyPage> {
         elevation: 0.0,
       ),
       body:SafeArea(
-        child:Container(
-          height: size.height,
-          padding: EdgeInsets.symmetric(horizontal: 20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Expanded(
-                flex: 1,
-                child:Container(
-                  width: double.infinity,
-                  child:Text('Daily practises',style: GoogleFonts.poppins(fontSize: 30,fontWeight: FontWeight.bold),),
-                ),
-              ),
-              Expanded(
-                flex: 10,
-                child:Container(
-                  child: SingleChildScrollView(
-                    child:ListView.builder(
-                        physics: NeverScrollableScrollPhysics(),
-                        shrinkWrap: true,
-                        itemCount: lt.length,
-                        itemBuilder:(ctx,index){
-                          return _posts(context,lt[index]);
-                        }),
+        child:Stack(
+          children: [
+            Container(
+              height: size.height,
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(
+                    flex: 1,
+                    child:Container(
+                      width: double.infinity,
+                      child:Text('Daily practises',style: GoogleFonts.poppins(fontSize: 30,fontWeight: FontWeight.bold),),
+                    ),
                   ),
-                ),
+                  Expanded(
+                    flex: 10,
+                    child:Container(
+                      child: SingleChildScrollView(
+                        child:ListView.builder(
+                            physics: NeverScrollableScrollPhysics(),
+                            shrinkWrap: true,
+                            itemCount: lt.length,
+                            itemBuilder:(ctx,index){
+                              return _posts(context,lt[index]);
+                            }),
+                      ),
+                    ),
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+            if(isLoading)Center(
+              child: ProIndicator(),
+            )
+          ],
         ),
       ),
     );

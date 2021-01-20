@@ -6,7 +6,7 @@ class ProIndicator extends StatefulWidget {
   @override
   _ProIndicatorState createState() => _ProIndicatorState();
 }
-
+//#my custom indicator
 class _ProIndicatorState extends State<ProIndicator> with SingleTickerProviderStateMixin{
   AnimationController _controller;
   Animation _animation;
