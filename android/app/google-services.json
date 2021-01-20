@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1063068991462",
+    "firebase_url": "https://planlar-4708d-default-rtdb.firebaseio.com",
+    "project_id": "planlar-4708d",
+    "storage_bucket": "planlar-4708d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1063068991462:android:a6809fdce44591122ae027",
+        "android_client_info": {
+          "package_name": "com.example.planlar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1063068991462-nac248oiif7c90n3hpfmmubfutv8bh9p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADftObFB8Aogne94HMyGA6af9eldRhxfw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1063068991462-nac248oiif7c90n3hpfmmubfutv8bh9p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1063068991462-njgegpd5l0iuisetu3cdq5puf0m5nqgl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.planlar"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
