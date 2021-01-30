@@ -157,7 +157,7 @@ class _DailyPageState extends State<DailyPage> {
                   Expanded(
                     flex:3,
                     child:Container(
-                      child:Text(post.title,style: GoogleFonts.poppins(fontSize: 23,fontWeight: FontWeight.w600),),
+                      child:Text(post.title,style: GoogleFonts.poppins(fontSize: 19,fontWeight: FontWeight.w600),),
                     ),),
                   Spacer(flex: 1,),
                   Expanded(

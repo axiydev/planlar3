@@ -179,7 +179,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 offset: Offset(0,-35),
                                 child:Container(
                                   width: double.infinity,
-                                  child:Text('Statistics',style:GoogleFonts.poppins(fontSize: 27,fontWeight: FontWeight.w600)),
+                                  child:Text('Statistics',style:GoogleFonts.poppins(fontSize: 25,fontWeight: FontWeight.w600)),
                                 ),
                               ),
                               //  mywidgets
@@ -210,6 +210,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Container(
       width: double.infinity,
       child:ListTile(
+        contentPadding: EdgeInsets.symmetric(horizontal: 0.0),
         leading: Container(
           height: _size.width*0.2,
           width: _size.width*0.15,

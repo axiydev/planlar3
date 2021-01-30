@@ -103,7 +103,7 @@ class ChartDart extends StatelessWidget {
             flex: 2,
             child:Container(
               child: Center(
-                child:Text(title,style: GoogleFonts.poppins(fontWeight: FontWeight.w500,color: Colors.grey[700]),),
+                child:Text(title,style: GoogleFonts.poppins(fontSize:13,fontWeight: FontWeight.w500,color: Colors.grey[700]),),
               ),
             ),)
         ],
@@ -117,7 +117,7 @@ class ChartDart extends StatelessWidget {
       width: double.infinity,
       child: Align(
         alignment: Alignment.bottomCenter,
-        child:Text(title,style: GoogleFonts.poppins(fontSize:20,fontWeight: FontWeight.w500,color: Colors.grey[700]),),
+        child:Text(title,style: GoogleFonts.poppins(fontSize:17,fontWeight: FontWeight.w500,color: Colors.grey[700]),),
       ),
     );
   }
