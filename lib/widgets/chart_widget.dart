@@ -14,10 +14,10 @@ class ChartDart extends StatelessWidget {
         children: [
           Column(
             children: [
-              Flexible(child: Align(alignment: Alignment.bottomCenter,child: Divider(thickness: 1,color: Colors.grey[500],indent: size.width*0.03,endIndent:size.width*0.099,),)),
-              Flexible(child: Align(alignment: Alignment.bottomCenter,child: Divider(thickness: 1,color: Colors.grey[500],indent: size.width*0.03,endIndent:size.width*0.099,),)),
-              Flexible(child: Align(alignment: Alignment.bottomCenter,child: Divider(thickness: 1,color: Colors.grey[500],indent: size.width*0.03,endIndent:size.width*0.099,),)),
-              Flexible(child: Align(alignment: Alignment.bottomCenter,child: Divider(thickness: 1,color: Colors.grey[500],indent: size.width*0.03,endIndent:size.width*0.099,),)),
+              Flexible(child: Align(alignment: Alignment.bottomCenter,child: Divider(thickness: 1,color: Colors.grey[200],indent: size.width*0.03,endIndent:size.width*0.13,),)),
+              Flexible(child: Align(alignment: Alignment.bottomCenter,child: Divider(thickness: 1,color: Colors.grey[200],indent: size.width*0.03,endIndent:size.width*0.13,),)),
+              Flexible(child: Align(alignment: Alignment.bottomCenter,child: Divider(thickness: 1,color: Colors.grey[200],indent: size.width*0.03,endIndent:size.width*0.13,),)),
+              Flexible(child: Align(alignment: Alignment.bottomCenter,child: Divider(thickness: 1,color: Colors.grey[200],indent: size.width*0.03,endIndent:size.width*0.13,),)),
               Flexible(child:Container()),
             ],
           ),
@@ -103,7 +103,7 @@ class ChartDart extends StatelessWidget {
             flex: 2,
             child:Container(
               child: Center(
-                child:Text(title,style: GoogleFonts.poppins(fontSize:13,fontWeight: FontWeight.w500,color: Colors.grey[700]),),
+                child:Text(title,style: GoogleFonts.poppins(fontSize:12,fontWeight: FontWeight.w500,color: Colors.grey[700]),),
               ),
             ),)
         ],
@@ -117,7 +117,7 @@ class ChartDart extends StatelessWidget {
       width: double.infinity,
       child: Align(
         alignment: Alignment.bottomCenter,
-        child:Text(title,style: GoogleFonts.poppins(fontSize:17,fontWeight: FontWeight.w500,color: Colors.grey[700]),),
+        child:Text(title,style: GoogleFonts.poppins(fontSize:15,fontWeight: FontWeight.w500,color: Colors.grey[700]),),
       ),
     );
   }

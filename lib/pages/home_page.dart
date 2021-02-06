@@ -170,6 +170,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               //#chart
                               Transform.translate(
                                 child:Container(
+                                  height:size.width*0.6,
+                                  width: double.infinity,
                                   child: ChartDart(),
                                 ),
                                 offset: Offset(0,-30),
