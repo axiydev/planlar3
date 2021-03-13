@@ -84,7 +84,7 @@ class ChartDart extends StatelessWidget {
   Widget _pro(BuildContext context,num s,Color color,String title){
     final Size size=MediaQuery.of(context).size;
     return Container(
-      padding: EdgeInsets.all(10),
+      padding: EdgeInsets.all(7),
       color: Colors.transparent,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
